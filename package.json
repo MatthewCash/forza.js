@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "compile": "tsc --outDir ./build",
-        "prepack": "npm sun compile",
-        "postinstall": "npm sun compile"
+        "prepack": "npm run compile",
+        "postinstall": "npm run compile"
     },
     "keywords": [],
     "author": "",
