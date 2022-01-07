@@ -1,20 +1,53 @@
-# forza-presence
+# forza.js
 
-A simple Discord rich presence displaying Forza telemetry data
+A simple JavaScript library for receiving Forza telemetry data
 Compatible with Forza Motorsport 7 and Forza Horizon 4 and 5
 
-## Installation
+## Usage
 
-1. Clone the repository
-2. Install the dependencies with `npm install`
-3. Enable "Data Out" in Forza Settings
+1. Install the module with `npm install MatthewCash/forza.js`
+2. Enable "Data Out" in Forza Settings
     - This is usually near the bottom of `HUD AND GAMEPLAY`
-    - Set IP adress to `127.0.0.1` and port to
+    - Set IP address to `127.0.0.1` and port to
         - Forza Motorsport 7 `9917`
         - Forza Horizon 4 `9924`
         - Forza Horizon 5 `9925`
-4. If you are using Forza from the Windows Store follow the instructions in [Network Isolation](#network-isolation)
-5. Run the program with `ts-node main.ts`
+3. If you are using Forza from the Windows Store follow the instructions in [Network Isolation](#network-isolation)
+4. Import the module in your code with
+
+```ts
+import forza from 'forza.js';
+```
+
+5. Instantiate the Forza class
+
+```ts
+const forza = new Forza();
+```
+
+6. Load games and start UDP sockets
+
+```ts
+await forza.loadGames();
+forza.startAllGameSockets();
+```
+
+### Now you can use the Forza class to receive telemetry data
+
+Get the latest telemetry data
+
+```ts
+const telemetry = await forza.getTelemetry();
+```
+
+Listen for telemetry data
+
+```ts
+forza.on('telemetry', data => {
+    // Do something with data
+    console.log(data);
+});
+```
 
 ## Network Isolation
 
