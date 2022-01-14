@@ -1,15 +1,15 @@
 {
     "name": "forza.js",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "A simple JavaScript library for receiving Forza telemetry data",
+    "main": "dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "compile": "tsc",
+        "compile": "tsc --outDir dist",
         "postinstall": "npm run compile"
     },
     "keywords": [],
-    "author": "",
+    "author": "Matthew_Cash",
     "license": "ISC",
     "dependencies": {
         "@types/node": "^16.10.2",

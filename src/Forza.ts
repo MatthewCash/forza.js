@@ -15,7 +15,7 @@ export default class Forza extends EventEmitter {
         this.games = [];
     }
     async loadGames(filterGames?: string[]): Promise<void> {
-        const gameDir = path.resolve(__dirname, './games/');
+        const gameDir = path.resolve(__dirname, '../games/');
 
         const files = await fs.readdir(gameDir);
         let gameFiles = files.filter(file => file.endsWith('.json'));
