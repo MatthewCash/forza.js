@@ -40,7 +40,7 @@ export const parseTelemetry = (raw: Buffer, offsets: Offsets): Telemetry => {
 
         const [bufferMethod, offsetDelta] = getBufferMethod(raw, type);
 
-        telemetry[datum] = bufferMethod.bind(raw)(offset);
+        telemetry[datum] = bufferMethod.call(raw, offset);
 
         offset += offsetDelta;
     }
