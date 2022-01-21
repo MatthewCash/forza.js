@@ -8,10 +8,12 @@ Compatible with Forza Motorsport 7 and Forza Horizon 4 and 5
 1. Install the module with `npm install MatthewCash/forza.js`
 2. Enable "Data Out" in Forza Settings
     - This is usually near the bottom of `HUD AND GAMEPLAY`
-    - Set IP address to `127.0.0.1` and port to
-        - Forza Motorsport 7 `9917`
-        - Forza Horizon 4 `9924`
-        - Forza Horizon 5 `9925`
+    - Set IP adress to `127.0.0.1` and port to
+      | Game | Port |
+      | ------------------ | ---- |
+      | Forza Motorsport 7 | 9917 |
+      | Forza Horizon 4 | 9924 |
+      | Forza Horizon 5 | 9925 |
 3. If you are using Forza from the Windows Store follow the instructions in [Network Isolation](#network-isolation)
 4. Import the module in your code with
 
