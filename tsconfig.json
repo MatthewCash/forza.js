@@ -1,7 +1,14 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-        "lib": ["ES2015"],
-        "resolveJsonModule": true
+        "lib": ["esNext"],
+        "target": "es6",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "resolveJsonModule": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true
     }
 }
